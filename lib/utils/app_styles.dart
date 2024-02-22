@@ -39,7 +39,7 @@ abstract class AppStyles {
   );
   static const TextStyle styleRegular12 = TextStyle(
     fontSize: 12,
-    color: Color(0xffFFFFFF),
+    color: Color(0xffAAAAAA),
     fontWeight: FontWeight.w400,
     fontFamily: 'Montserrat',
   );
