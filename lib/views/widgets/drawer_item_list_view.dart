@@ -28,16 +28,13 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
+    return SliverList.builder(
       itemCount: drawerItem.length,
       itemBuilder: (context, index) => GestureDetector(
         onTap: () {
           if (activeIndex != index) {
             setState(() {
               activeIndex = index;
-              
             });
           }
         },
