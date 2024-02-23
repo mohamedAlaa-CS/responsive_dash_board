@@ -3,28 +3,38 @@ import 'package:responsive_dash_board/models/all_expenses_itwm_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/views/widgets/all_expenses_item.dart';
 
-class AllExpensesItemListView extends StatelessWidget {
+class AllExpensesItemListView extends StatefulWidget {
   const AllExpensesItemListView({super.key});
-  static const List<AllExpensesItemModel> items = [
-    AllExpensesItemModel(
+
+  @override
+  State<AllExpensesItemListView> createState() =>
+      _AllExpensesItemListViewState();
+}
+
+class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
+  final List<AllExpensesItemModel> items = [
+    const AllExpensesItemModel(
       image: Assets.imagesBalance,
       title: 'Balance',
       date: 'April 2022',
       price: r'$20,129',
     ),
-    AllExpensesItemModel(
+    const AllExpensesItemModel(
       image: Assets.imagesIncome,
       title: 'Income',
       date: 'April 2022',
       price: r'$20,129',
     ),
-    AllExpensesItemModel(
+    const AllExpensesItemModel(
       image: Assets.imagesExpenses,
       title: 'Expenses',
       date: 'April 2022',
       price: r'$20,129',
     ),
   ];
+
+  int selectedIndaex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -32,12 +42,26 @@ class AllExpensesItemListView extends StatelessWidget {
         var index = e.key;
         var item = e.value;
         return Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-            child: AllExpensesItem(allExpensesItemModel: item),
+          child: GestureDetector(
+            onTap: () {
+              updateIndax(index);
+            },
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+              child: AllExpensesItem(
+                isSelected: selectedIndaex == index,
+                allExpensesItemModel: item,
+              ),
+            ),
           ),
         );
       }).toList(),
     );
+  }
+
+  void updateIndax(int index) {
+    setState(() {
+      selectedIndaex = index;
+    });
   }
 }
