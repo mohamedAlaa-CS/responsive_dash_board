@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/views/widgets/custom_backGround_widget.dart';
 import 'package:responsive_dash_board/views/widgets/latest_transation_widget.dart';
 import 'package:responsive_dash_board/views/widgets/quick_invoice_header.dart';
+import 'package:responsive_dash_board/views/widgets/title_text_field.dart';
 
 class QuickInvoice extends StatelessWidget {
   const QuickInvoice({super.key});
@@ -14,6 +15,10 @@ class QuickInvoice extends StatelessWidget {
           children: [
             QuickInvoiceHeader(),
             LatestTransactionWidget(),
+            TitleTextField(
+              title: 'Customer name',
+              hint: 'Type customer name',
+            )
           ],
         ));
   }
