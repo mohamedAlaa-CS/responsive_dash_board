@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/views/widgets/custom_backGround_widget.dart';
+import 'package:responsive_dash_board/views/widgets/latest_transation_widget.dart';
 import 'package:responsive_dash_board/views/widgets/quick_invoice_header.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -12,6 +13,7 @@ class QuickInvoice extends StatelessWidget {
         child: Column(
           children: [
             QuickInvoiceHeader(),
+            LatestTransactionWidget(),
           ],
         ));
   }
