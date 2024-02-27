@@ -14,6 +14,7 @@ class MyCard extends StatelessWidget {
         decoration: BoxDecoration(
           image: const DecorationImage(
             image: AssetImage(Assets.imagesBackgroungCard),
+            fit: BoxFit.fill,
           ),
           color: const Color(0xff4EB7F2),
           borderRadius: BorderRadius.circular(12),
