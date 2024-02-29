@@ -16,12 +16,12 @@ class TransactionHistoryItem extends StatelessWidget {
       child: ListTile(
         title: Text(
           model.title,
-          style: AppStyles.styleSemiBold16,
+          style: AppStyles.styleSemiBold16.copyWith(fontSize: 12),
         ),
         subtitle: Text(
           model.date,
-          style:
-              AppStyles.styleRegular16.copyWith(color: const Color(0xffAAAAAA)),
+          style: AppStyles.styleRegular16
+              .copyWith(color: const Color(0xffAAAAAA), fontSize: 12),
         ),
         trailing: Text(
           model.price,
