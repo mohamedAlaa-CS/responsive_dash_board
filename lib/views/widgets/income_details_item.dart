@@ -10,7 +10,7 @@ class IncomeDetailsItem extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.zero,
       horizontalTitleGap: 0,
-      minVerticalPadding: 3,
+      minVerticalPadding: 0,
       leading: Container(
         height: 12,
         width: 12,
