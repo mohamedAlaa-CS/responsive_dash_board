@@ -11,7 +11,6 @@ class IncomeSectionBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    print(width);
     return width >= 1200 && width < 1400
         ? const Expanded(
             child: Padding(
