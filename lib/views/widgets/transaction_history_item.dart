@@ -16,7 +16,7 @@ class TransactionHistoryItem extends StatelessWidget {
       child: ListTile(
         title: Text(
           model.title,
-          style: AppStyles.styleSemiBold16.copyWith(fontSize: 12),
+          style: AppStyles.styleSemiBold16,
         ),
         subtitle: Text(
           model.date,

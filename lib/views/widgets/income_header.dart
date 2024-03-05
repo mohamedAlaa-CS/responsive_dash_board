@@ -11,7 +11,7 @@ class IncomeHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const Text(
+        Text(
           'Income',
           style: AppStyles.styleSemiBold20,
         ),
@@ -25,14 +25,14 @@ class IncomeHeader extends StatelessWidget {
               color: const Color(0xffF1F1F1),
             ),
           ),
-          child: const Row(
+          child: Row(
             children: [
               Text(
                 'Monthly',
                 style: AppStyles.styleMedium16,
               ),
-              SizedBox(width: 18),
-              Icon(
+              const SizedBox(width: 18),
+              const Icon(
                 Icons.keyboard_arrow_down_outlined,
                 size: 30,
                 color: Color(0xff064061),
