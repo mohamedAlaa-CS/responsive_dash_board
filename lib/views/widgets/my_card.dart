@@ -28,7 +28,8 @@ class MyCard extends StatelessWidget {
                 contentPadding: EdgeInsets.zero,
                 title: Text(
                   'Name card',
-                  style: AppStyles.styleRegular16(context).copyWith(color: Colors.white),
+                  style: AppStyles.styleRegular16(context)
+                      .copyWith(color: Colors.white),
                 ),
                 subtitle: Text(
                   'Mohamed Alaa',
@@ -45,18 +46,18 @@ class MyCard extends StatelessWidget {
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style:
-                        AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
+                    style: AppStyles.styleSemiBold24(context)
+                        .copyWith(color: Colors.white),
                   ),
                   Text(
                     '12/20 - 124',
-                    style:
-                        AppStyles.styleRegular16(context).copyWith(color: Colors.white),
+                    style: AppStyles.styleRegular16(context)
+                        .copyWith(color: Colors.white),
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 27)
+            const Flexible(child: SizedBox(height: 27))
           ],
         ),
       ),
