@@ -11,20 +11,20 @@ class IncomeSectionBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-
-    return width >= 1300 && width < 1400
+    print(width);
+    return width >= 1200 && width < 1400
         ? const Expanded(
             child: Padding(
             padding: EdgeInsets.all(16),
             child: DetailedIncomeChart(),
           ))
         : const Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(child: IncomeChart()),
-            SizedBox(width: 20),
-            Expanded(flex: 2, child: IncomeDetailsListView()),
-          ],
-        );
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(child: IncomeChart()),
+              SizedBox(width: 20),
+              Expanded(flex: 2, child: IncomeDetailsListView()),
+            ],
+          );
   }
 }
